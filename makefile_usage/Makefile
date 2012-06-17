@@ -1,1 +1,2 @@
-exec: cd ~/Sparkleshare/Ve330; pwd
+exec: 
+	cd ~/Sparkleshare/Ve330; pwd
