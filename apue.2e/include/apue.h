@@ -126,3 +126,5 @@ void	WAIT_PARENT(void);
 void	WAIT_CHILD(void);
 
 #endif	/* _APUE_H */
+
+#include "error.c"
