@@ -7,12 +7,12 @@ all:	${PROGS}
 conf:	conf.c
 
 conf.c:
-	nawk -f makeconf.awk >conf.c
+	awk -f makeconf.awk >conf.c
 
 options:	options.c
 
 options.c:
-	nawk -f makeopt.awk >options.c
+	awk -f makeopt.awk >options.c
 
 clean:
 	rm -f ${PROGS} ${TEMPFILES} options.c conf.c
