@@ -1,3 +1,7 @@
+/*
+ * list all the files in directory.
+ */
+
 #include "apue.h"
 #include <dirent.h>
 
