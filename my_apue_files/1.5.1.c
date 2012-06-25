@@ -1,5 +1,5 @@
 /*
- *list all the files in a directory.
+ * list all the files in a directory.
  */
 #include "apue.h"
 #define BUFFSIZE	4096
