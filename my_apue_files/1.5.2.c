@@ -1,5 +1,5 @@
 /*
- *copy standard input to standard output, using standard I/O.
+ * copy standard input to standard output, using standard I/O.
  */
 #include "apue.h"
 int
