@@ -14,7 +14,7 @@ main(void)
 
 	printf("%% ");	/* print prompt (print requires %% to print %) */
 	while (fgets(buf, MAXLINE, stdin) != NULL) {
-		if (buf[strlen(buf) - 1] == "\n")
+		if (buf[strlen(buf) - 1] == '\n')
 			buf[strlen(buf) - 1] = 0; /* replace newline with null */
 
 		if ((pid = fork()) < 0) {
