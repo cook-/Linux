@@ -7,6 +7,6 @@
 int
 main()
 {
-	printf("uid = %d\ngid = %d", getuid(), getgid());
+	printf("uid = %d\ngid = %d\n", getuid(), getgid());
 	exit(0);
 }
