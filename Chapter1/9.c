@@ -3,7 +3,7 @@
  * a more complex version of 6_2.c.
  */
 
-#include "apue"
+#include "apue.h"
 #include <sys/wait.h>
 
 static void sig_int(int);	/* our signal-catching function*/
