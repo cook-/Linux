@@ -1,0 +1,26 @@
+1. Required Headers Defined by the POSIX Standard
+	<dirent.h>			directory entries
+	<fcntl.h>			file control
+	<fnmatch.h>			filename-mathing types
+	<glob.h>			pathname pattern-matching types
+	<grp.h>				group file
+	<pwd.h>				password file
+	<regex.h>			regular expression
+	<tar.h>				tar archive values
+	<termios.h>			terminal I/O
+	<unistd.h>			symbolic constants
+	<utime.h>			file times
+	<wordexp.h>			word-expansion types
+	<arpa/inet.h>		Internet definitions
+	<net/if.h>			socket local interfaces
+	<netinet/tcp.h>		Internet address family
+	<netinet/tcp.h>		Transmission Control Protocal definitions
+	<sys/mman.h>		memory management declarations
+	<sys/select.h>		select function
+	<sys/socket.h>		sockets interface
+	<sys/stat.h>		file status
+	<sys/times.h>		process times
+	<sys/types.h>		primitive system data types
+	<sys/un.h>			UNIX domain socket definitions
+	<sys/utsname>		system name
+	<sys/wait.h>		process control
