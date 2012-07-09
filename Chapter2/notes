@@ -24,3 +24,12 @@
 	<sys/un.h>			UNIX domain socket definitions
 	<sys/utsname>		system name
 	<sys/wait.h>		process control
+2. UNIX system inplementations
+	SVR4			System V Release 4
+	4.4BSD			Berkeley Software Distribution
+	FreeBSD			Based on FreeBSD
+	Linux
+	MacOSX			Darwin = Mach kernel + FreeBSD
+	Solaries		Based on SVR4
+	AIX				IBM's version
+3. 
