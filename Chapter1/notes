@@ -1,12 +1,16 @@
 Chapter1
-1.program:	an executable file residing on disk ina directory.
-2.process:	an excuting instance of a program.
-3.thread:	the smallest unit of processing that can be  scheduled by an 
-         	operatng system and contained inside a process.                    
-4.POSIX:	Portable Operating System Interface, IEEE standard for maintaining
-        	compatibility between operating systems, formally designated as
-			IEEE 1003.
-5.system calls:	all implementations of the operating system provide a well-
-              	defined, limited number of entry points directly into the
-			  	kernel.
+1.program:
+	an executable file residing on disk ina directory.
+2.process:
+	an excuting instance of a program.
+3.thread:
+	the smallest unit of processing that can be  scheduled by an operating 
+	system and contained inside a process.
+4.POSIX:
+	Portable Operating System Interface, IEEE standard for maintaining 
+	compatibility between operating systems, formally designated as
+	IEEE 1003.
+5.system calls:
+	all implementations of the operating system provide a well-defined, 
+	limited number of entry points directly into the kernel.
 6.library function:	
