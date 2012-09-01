@@ -1,7 +1,7 @@
 #include "apue.h"
 
 int
-main(int agrc, char *argv[])
+main(int argc, char *argv[])
 {
 	int i;
 
