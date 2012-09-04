@@ -1,0 +1,8 @@
+Chapter8
+1. process ID(the only well-known identifier of a process)
+		process ID 0: 
+			the scheduler process or the swapper
+			part of the kernel, a system process
+		process ID 1: 
+			the init process, invoked by the kernel at the end of the bootstrap 			/sbin/init reads initialization files(/etc/rc* or /etc/inittab) 
+			and the files in /etc/init.d
