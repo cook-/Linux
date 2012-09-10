@@ -1,0 +1,44 @@
+Chapter3
+1. file descriptor:
+		All open files are refered to by file descriptors.
+		A file descriptor is a non-negtive integer.
+		0 --> standard input
+		1 --> standard output
+		2 --> standard error
+		In POSIX-complaint applications, we use 
+			STDIN_FILENO, STDOUT_FILENO and STDERR_FILENO 
+				defined in the <unistd.h> header
+2. open Function:
+		#include <fcntl.h>
+		int open(const char *pathname, int oflag, .../* mode_t mode */);
+			Returns: file descriptor if OK, -1 on error
+3. creat Function:
+		#include <fcntl.h>
+		int creat(const char *pathname, mode_t mode);
+			Returns: file decriptor opened for write_only if OK, -1 on error
+4. close Function:
+		#include <unistd.h>
+		int close(int filedes);
+			Returns: 0 is OK, -1 on error
+		(When a process terminate,  all of its open files are automatically 
+		closed by the kernel)
+5. lseek Function:
+		#include <unistd.h>
+		off_t lseek(int filedes, off_t offset, int whence);
+			Return: new file offset if OK, -1 on error
+			If whence is SEEK_SET, the file's offset is set to offset bytes
+				from the beginning of the file.
+			If whence is SEEK_CUR, the file's offset is set to its current
+				value plus offset.
+			If whence is SEEK_END, the file's offset is set to the size of
+				the file plus offset.
+		(off_t currpos = lseek(fd, 0, SEEK_CUR) to determine if a file seekable)
+6. read Function:
+		#include <unistd.h>
+		ssize_t read(int filedes, void *buf, size_t nbytes);
+			Returns: number of bytes read, 0 if end of file, -1 on error
+7. write Function:
+		#include <unistd.h>
+		ssize_t write(int filedes, const void *buf, size_t nbytes);
+			Returns: number of bytes written if OK, -1 on error
+8. 
