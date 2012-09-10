@@ -12,7 +12,7 @@ int
 main(void)
 {
 	int fd;
-	if ((fd = creat("file.hole, FILE_MODE")) < 0)
+	if ((fd = creat("file.hole", FILE_MODE)) < 0)
 		err_sys("creat error");
 	if (write(fd, buf1, 10) != 10)
 		err_sys("buf1 write error");
