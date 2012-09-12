@@ -8,21 +8,21 @@ Chapter3
 		In POSIX-complaint applications, we use 
 			STDIN_FILENO, STDOUT_FILENO and STDERR_FILENO 
 				defined in the <unistd.h> header
-2. open Function:
+2. open
 		#include <fcntl.h>
 		int open(const char *pathname, int oflag, .../* mode_t mode */);
 			Returns: file descriptor if OK, -1 on error
-3. creat Function:
+3. creat
 		#include <fcntl.h>
 		int creat(const char *pathname, mode_t mode);
 			Returns: file decriptor opened for write_only if OK, -1 on error
-4. close Function:
+4. close
 		#include <unistd.h>
 		int close(int filedes);
 			Returns: 0 is OK, -1 on error
 		(When a process terminate,  all of its open files are automatically 
 		closed by the kernel)
-5. lseek Function:
+5. lseek
 		#include <unistd.h>
 		off_t lseek(int filedes, off_t offset, int whence);
 			Return: new file offset if OK, -1 on error
@@ -33,12 +33,32 @@ Chapter3
 			If whence is SEEK_END, the file's offset is set to the size of
 				the file plus offset.
 		(off_t currpos = lseek(fd, 0, SEEK_CUR) to determine if a file seekable)
-6. read Function:
+6. read
 		#include <unistd.h>
 		ssize_t read(int filedes, void *buf, size_t nbytes);
 			Returns: number of bytes read, 0 if end of file, -1 on error
-7. write Function:
+7. write
 		#include <unistd.h>
 		ssize_t write(int filedes, const void *buf, size_t nbytes);
 			Returns: number of bytes written if OK, -1 on error
-8. 
+8. dup& dup2
+		#include <unistd.h>
+		int dup(int filedes);
+			Returns: new file descriptor if OK, -1 on error
+		int dup2(int filedes, int filedes2);
+			Returns: new file descriptor if OK, -1 on error
+9. sync, fsync, and fdatasync
+		#include <unistd.h>
+		int fsync(int filedes);
+			Returns: 0 if OK, -1 on error
+		int fdatasync(int filedes);
+			Returns: 0 is Ok, -1 on error
+		void sync(void);
+			(called by the command sync(1))
+10. ioctl
+		#include <unistd.h>
+		#include <sys/ioctl.h>
+		int ioctl(int filedes, int request, ...);
+			Returns: -1 on error, something else if OK
+11. /dev/fd:
+		opening the file /dev/fd/n is equivalent to duplicating descriptor n
