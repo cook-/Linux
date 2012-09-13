@@ -1,0 +1,27 @@
+Chapter 4
+1. stat, fstat & lstate
+		#include <sys/stat.h>
+		int stat(const char *restrict pathname, struct stat *restrict buf);
+			Returns: 0 if OK, -1 on error
+		int fstat(int filedes, struct stat *buf);
+			Returns: 0 if OK, -1 on error
+		int lstat(const char *restrict pathname, struct stat *restrict buf);
+			Returns: 0 if OK, -1 on error
+
+		struct stat {
+			mode_t st_mode;	/* file type & mode(permissions) */
+			ino_t st_ino;	/* i-node number(serial number) */
+			dev_t st_dev;	/* device number(file system) */
+			dev_t st_rdev;	/* device number for special files */
+			nlink_t st_nlink;	/* number of links */
+			uid_t st_uid;	/* user ID of owner */
+			gid_t st_gid;	/* group ID of owner */
+			off_t st_size;	/* size in bytes, for regular files */
+			time_t st_atime;	/* last access time */
+			time_t st_mtime;	/* last modification time */
+			time_t st_ctime;	/* last file status change time */
+			blksize_t st_blksize;	/* best I/O block size */
+			blkcnt_t st_blocks;	/* number of disk blocks allocated */
+		}
+
+
