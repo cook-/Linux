@@ -1,6 +1,6 @@
 Below are some commonly-used commands:
 --------------------------------------------------------------------------------
-1. extract a tarball to a specific directory(to the current path without -C):
+1. Extract a tarball to a specific directory(to the current path without -C):
 --------------------------------------------------------------------------------
 	tar -jxvf filename.tar.bz2 -C dirname
 	tar -zxvf filename.tar.gz -C dirname
